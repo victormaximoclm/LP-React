@@ -1,0 +1,45 @@
+# Dependências
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build
+.next
+out
+dist
+build
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentação
+README.md
+*.md
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Cache
+.turbo
+.cache
+coverage
+
+# Outros
+*.tmp
+*.temp
+

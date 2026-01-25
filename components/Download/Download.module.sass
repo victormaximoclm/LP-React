@@ -1,0 +1,304 @@
+@import @/styles/helpers
+
+.download
+    position: relative
+    padding: 96px 0 120px
+    background: $g7
+    +t
+        padding-bottom: 96px
+    +m
+        padding: 64px 0
+
+.row
+    display: flex
+    align-items: center
+    gap: 60px
+    +d
+        gap: 50px
+    +t
+        gap: 0
+        flex-direction: column
+        align-items: stretch
+    +m
+        gap: 0
+
+.col
+    &:first-child
+        flex: 0 0 420px
+        +d
+            flex: 0 0 360px
+        +t
+            flex: 0 0 100%
+            margin-bottom: 40px
+        +m
+            flex: 0 0 100%
+            margin: 0 0 32px 0
+    &:last-child
+        flex: 1
+        min-width: 0
+        margin-top: -116px
+        +t
+            margin-top: 0px
+            flex: 0 0 100%
+        +m
+            margin-top: 0
+            display: block
+
+.logo
+    margin-bottom: 38px
+
+.text
+    max-width: 100%
+    margin-bottom: 38px
+    +body-1
+
+.form
+    input,
+    textarea
+        width: 100%
+        padding: 20px 24px
+        margin-bottom: 16px
+        background: rgba($s1, .5)
+        border: 2px solid rgba($s4, .25)
+        border-radius: 16px
+        font-family: $poppins
+        font-size: 16px
+        font-weight: 500
+        color: $p5
+        line-height: 24px
+        letter-spacing: -0.03em
+        transition: border-color .4s
+        &::placeholder
+            color: rgba($p5, .4)
+        &:hover,
+        &:focus
+            outline: none
+            border-color: rgba($s4, .5)
+    textarea
+        resize: vertical
+        min-height: 120px
+
+.actions
+    display: flex
+    flex-direction: column
+    gap: 16px
+    margin-top: 24px
+    +m
+        gap: 12px
+
+.submitBtn
+    width: 100%
+    padding: 20px
+    background: $p1
+    border: none
+    border-radius: 16px
+    font-family: $poppins
+    font-size: 16px
+    font-weight: 600
+    color: $s1
+    line-height: 24px
+    letter-spacing: -0.03em
+    cursor: pointer
+    transition: background .4s, transform .2s
+    &:hover
+        background: rgb(223, 222, 222)
+        transform: translateY(-2px)
+    &:active
+        transform: translateY(0)
+    span
+        display: block
+
+.whatsapp
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding: 20px
+    background: rgba($s1, .5)
+    border: 2px solid rgba($s4, .25)
+    border-radius: 16px
+    font-family: $poppins
+    font-size: 16px
+    font-weight: 500
+    color: $p5
+    line-height: 24px
+    letter-spacing: -0.03em
+    text-align: center
+    text-decoration: none
+    transition: border-color .4s, background .4s
+    &:hover
+        border-color: rgba($s4, .5)
+        background: rgba($s1, .7)
+
+.socials
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -24px -24px 0
+    li
+        margin: 0 24px 24px 0
+        &:last-child
+            position: relative
+            &:before,
+            &:after
+                content: ""
+                position: absolute
+                pointer-events: none
+                +m
+                    display: none
+            &:before
+                top: calc(50% - 1px)
+                left: 100%
+                width: 116px
+                height: 2px
+                background: $s5
+                +d
+                    width: 150px
+                +t
+                    width: 126px
+            &:after
+                top: calc(50% - 5px)
+                left: 200px
+                z-index: 2
+                width: 10px
+                height: 10px
+                background: $s1
+                border: 2px solid $s5
+                border-radius: 50%
+                +d
+                    left: 234px
+                +t
+                    left: 210px
+    a
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 88px
+        height: 88px
+        background: $s1
+        border: 2px solid $s3
+        border-radius: 50%
+        transition: border-color .4s
+        &:hover
+            border-color: $s4
+            svg
+                fill: $p1
+        &:before
+            content: ""
+            position: absolute
+            inset: 5px
+            background: $s2
+            border-radius: 50%
+        &:after
+            content: ""
+            position: absolute
+            top: -2px
+            left: calc(50% - 16px)
+            width: 32px
+            height: 8px
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='8' fill='%232EF2FF'%3E%3Cpath d='M15.998 0c5.193 0 10.267.883 15.057 2.588l.651.238-.616 1.649c-3.203-1.197-6.542-2.008-9.965-2.413L16.66 7.163a.88.88 0 0 1-1.325 0l-4.464-5.102A42.84 42.84 0 0 0 1.56 4.236l-.654.238L.29 2.826C5.271.965 10.569 0 15.998 0z' /%3E%3C/svg%3E")
+    svg
+        position: relative
+        z-index: 2
+        fill: $p4
+        transition: fill .4s
+
+.preview
+    position: relative
+    width: 100%
+    min-width: 850px
+    max-width: 100%
+    padding: 10px
+    border: 2px solid $s5
+    border-radius: 40px
+    overflow: visible
+    +d
+        min-width: 600px
+    +t
+        min-width: 500px
+        width: 100%
+    +m
+        min-width: 0
+        padding: 16px
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        height: 2px
+        background: $g8
+        opacity: .4
+    &:before
+        top: -2px
+        right: 24px
+        width: 63.2%
+        +m
+            right: 16px
+    &:after
+        left: 24px
+        bottom: -2px
+        width: 42.2%
+        +m
+            left: 16px
+
+.screen
+    position: relative
+    padding: 58px 18px 24px
+    background: $s1
+    border-radius: 24px
+    overflow: visible
+    +m
+        padding: 40px 12px 16px
+    span
+        position: absolute
+        top: 24px
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        +m
+            top: 16px
+            width: 8px
+            height: 8px
+        &:nth-child(1)
+            left: 24px
+            background: $p2
+            +m
+                left: 16px
+        &:nth-child(2)
+            left: 44px
+            background: $s3
+            +m
+                left: 32px
+        &:nth-child(3)
+            left: 64px
+            background: rgba($p1, .15)
+            +m
+                left: 48px
+    img
+        border-radius: 12px
+        width: 100% !important
+        height: auto !important
+        max-width: 100% !important
+        min-width: 600px
+        display: block
+        +d
+            min-width: 500px
+        +t
+            min-width: 400px
+        +m
+            min-width: 0
+
+.logos
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 96px -40px 0
+    +t
+        display: none
+    li
+        margin: 0 40px
+        display: flex
+        align-items: center
+        justify-content: center
+
+.logoItem
+    filter: grayscale(100%) brightness(0) invert(1)
