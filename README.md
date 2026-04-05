@@ -30,7 +30,7 @@ Criar uma interface moderna e eficiente para:
 
 ## 🖼️ Preview
 
-> Adicione aqui prints da landing page (home, planos, formulário, etc.)
+
 
 ---
 
