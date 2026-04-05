@@ -75,6 +75,23 @@ yarn dev
 
 ---
 
+### 📈 Possíveis Extensões
+
+Integração com CRM (ex: HubSpot, Pipedrive)
+Tracking de eventos (Google Analytics / Pixel)
+Dashboard de leads
+A/B testing de páginas
+
+###📄 Licença
+
+Projeto de código aberto para uso como base em aplicações reais.
+
+👨‍💻 Autor
+
+Desenvolvido como solução prática para captação de leads e conversão digital.
+
+---
+
 ### Variáveis de Ambiente
 
 Crie o arquivo `.env.local`:
@@ -86,3 +103,4 @@ SMTP_USER=seu-email@gmail.com
 SMTP_PASS=sua-senha-ou-app-password
 SMTP_FROM=seu-email@gmail.com
 EMAIL_TO=destino@exemplo.com
+---
